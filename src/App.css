@@ -1,21 +1,112 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 30px;
+  font-family: 'Amatic SC', cursive;
 }
 
 .App-header {
-  background-color: #6C5E4B;
-  height: 400px;
-  padding: 30px;
-  color: #000000;
+  background-color: #D1B79E;
+  height: 200px;
+  padding: 20px;
+  margin: 10px;
+  color: #FFFFFF;
+position: relative;
+height: 590px;
+background: url(https://farm5.staticflickr.com/4418/36156196393_b84ee6e557_b.jpg) no-repeat center center;
+background-size: cover;
+&:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+}
+}
+
+.App-logo {
+  height: 250px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.header-font{
+  font-family: 'Amatic SC', cursive;
+  font-size: 100px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.main1 {
+  background-color: #D1B79E;
+display: flex;
+flex-direction: column;
+flex-wrap: nowrap;
+justify-content: center;
+align-items: stretch;
+align-content: stretch;
+}
+
+  .form-submit {
+    background-color: #D1B79E;
+    margin: 30px;
+    padding: 30px;
+    font-size: 30px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+  align-content: stretch;
+  list-style: none;
+}
+
+.button1 {
+  background-color: #4F4032;
+  color: white;
+  margin: 30px;
+  padding: 20px;
+  font-size: 20px;
+display: flex;
+flex-direction: column;
+flex-wrap: nowrap;
+justify-content: flex-start;
+align-items: center;
+align-content: stretch;
+}
+
+.info-box{
+background-color: #185723;
+color: white;
+border: 1px solid black;
+font-size: 40px;
+margin: 0px;
+padding: 30px;
+display: flex;
+flex-direction: column;
+flex-wrap: nowrap;
+justify-content: space-around;
+align-items: center;
+align-content: stretch;
+list-style: none;
 }
 
 .App-intro {
-  font-size: 20px;
+  font-size: 80px;
+  padding: 0px;
+  margin: 20px;
+}
+.link-flex {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+align-content: center;
+  list-style: none;
 }
 
-
+.link-size{
+  max-width:200px;
+  max-height:200px;
+}
