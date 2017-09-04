@@ -2,10 +2,10 @@ import React from 'react';
 import axios from "axios";
 
 class Child extends React.Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state = {
-          array: [],
+          incomplete: props.incomplete,
           trail: "",
           city: "",
           country: ""
@@ -13,32 +13,36 @@ class Child extends React.Component {
       }
 
       updateTrail(input){
-          console.log(input)
         this.setState({
             trail: input
         })
       }
       updateCity(input){
-          console.log(input)
           this.setState({
               city: input
           })
       }
       updateCountry(input){
-          console.log(input)
           this.setState({
               country: input
           })
       }
 
+      componentWillReceiveProps(props){
+        this.setState({
+            incomplete: props.incomplete
+        })
+      }
+
 
     render() {
+        console.log(this.props.incomplete)
         return(
             <div>
                 <div className="main1">
                      <h1 className="App-intro">Keep track of your trails!</h1>
                         <p className="App-intro">Trails to Blaze</p>                
-                 <div>
+                    <div>
                      <form action="">
                          <ul className="form-submit">
                          <li>Trail Name:</li>
@@ -49,24 +53,24 @@ class Child extends React.Component {
                          <li><input type="text" value={this.state.value} onChange={(e) => {this.updateCountry(e.target.value)}} /></li>
                          </ul>
                      </form>
-                    <input className="button1" type="submit" value="Submit" onClick={() => {
-                        this.props.addTrail(this.state.trail, this.state.city, this.state.country)}} />
-                </div>
-          <div>
+                    <button className="button" type="submit" value="Submit" onClick={() => {
+                        this.props.addTrail(this.state.trail, this.state.city, this.state.country)}} >Add Hike!</button>
+                    </div>
+                    <div>
               
-          <ul className="info-box">
-          {this.state.array.map(function(elem){
-          return (<li>{elem}</li>)
-          })}
-          </ul>
-          </div>
+                        <ul className="info-box">
+                        {this.state.incomplete.map(function(elem){
+                        return (<li key={elem.name}>{elem.name} {elem.city} {elem.state}</li>)
+                        })}
+                    </ul>
+                    </div>
 
-          <p className="App-intro">Trails Blazed</p>
+                        <p className="App-intro">Trails Blazed</p>
                  </div>
                  <div>
                       <ul className="info-box">
-                              {this.state.array.map(function(elem){
-                              return (<li>{elem}</li>)
+                              {this.state.incomplete.map(function(elem){
+                              return (<li key={elem.name}>{elem.name}</li>)
                               })}
                       </ul>
                  </div>

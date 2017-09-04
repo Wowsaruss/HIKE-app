@@ -6,17 +6,6 @@ var app = express()
 
 app.use(cors())
 var arr = [{
-    name: "",
-    city: "",
-    state: ""
-}, {
-    name: "",
-    city: "",
-    state: ""
-}, {
-    name: "",
-    city: "",
-    state: ""
 }];
 
 app.get("/api/hello", function(request, response){
