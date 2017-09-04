@@ -5,12 +5,32 @@ var cors = require("cors")
 var app = express()
 
 app.use(cors())
-var arr = [{
-}];
 
-app.get("/api/hello", function(request, response){
-    response.json(arr)
+app.use(bodyParser.json())
+
+// var arr = [{
+//     Dog: "",
+//     Legs: "",
+//     tail: ""
+// }];
+
+let incompleteTrails = [];
+
+app.post("/api/create", function(request, response) {
+    incompleteTrails.push(request.body)
+    response.json(incompleteTrails)
 })
+
+
+
+app.get("/api/create", function(request, response) {
+    incompleteTrails.push(incompleteTrails)
+
+})
+
+// app.get("/api/hello", function(request, response){
+//     response.json(arr)
+// })
 
 app.listen(3006, function(){
     console.log("I'm listening!")

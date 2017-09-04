@@ -17,7 +17,7 @@ class Child extends React.Component {
                      </a></li>
                     </ul>
 
-                <div><p>Copyright © Russell Hayes Web Design 2017</p></div>
+                <div class=""><p>Copyright © Russell Hayes Web Design 2017</p></div>
             </div>
         )
     }

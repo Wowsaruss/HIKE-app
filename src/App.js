@@ -3,7 +3,6 @@ import Header from './Header';
 import Form from './Form';
 import Footer from './Footer';
 import './App.css';
-
 import axios from "axios";
 
 
@@ -17,12 +16,12 @@ class App extends Component {
   }
 
 componentDidMount(){
-  console.log("Hello")
-  axios.get("http://localhost:3006/api/hello").then((response) => {
-    this.setState({
-        incomplete: response.data
-      })
-    })
+  
+  // axios.get("http://localhost:3006/api/create").then((response) => {
+  //   this.setState({
+  //       incomplete: response.data
+  //     })
+  //   })
   }
 
   newTrail(name, city, state){
@@ -31,22 +30,40 @@ componentDidMount(){
       city,
       state
     }
+// axios.post("http://localhost:3006/api/create", obj).then((response) => {
+//     console.log(response)
+// })
+
+axios.post("http://localhost:3006/api/create", obj).then((response) => {
+  this.setState({
+    incomplete: response.data
+
+  })
+})
+
+
+
     this.setState({
       incomplete: [...this.state.incomplete, obj]
     })
   }
   
-
-  render() {
-    console.log(this.state.incomplete)
+ render() {
+    // console.log(this.state.incomplete)
     return (
       <div className="App">
+        {/* POINTS
+            1 Flexbox
+            1 Bootstrap
+            1 Fully Responsize CSS
+            1 Custom Animation
+            1.5 3 Functional Components */}
 
-          <div>
+          <div name="hero">
             <Header />
           </div>
 
-          <div>
+          <div name="track">
             <Form addTrail={this.newTrail} incomplete={this.state.incomplete}/>
           </div>
 

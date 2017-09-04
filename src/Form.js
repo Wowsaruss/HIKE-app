@@ -36,14 +36,13 @@ class Child extends React.Component {
 
 
     render() {
-        console.log(this.props.incomplete)
         return(
             <div>
                 <div className="main1">
                      <h1 className="App-intro">Keep track of your trails!</h1>
                         <p className="App-intro">Trails to Blaze</p>                
                     <div>
-                     <form action="">
+                        <form action="">
                          <ul className="form-submit">
                          <li>Trail Name:</li>
                          <li><input type="text" value={this.state.value} onChange={(e) => {this.updateTrail(e.target.value)}} /></li>
@@ -52,26 +51,27 @@ class Child extends React.Component {
                          <li>State/Country:</li>
                          <li><input type="text" value={this.state.value} onChange={(e) => {this.updateCountry(e.target.value)}} /></li>
                          </ul>
-                     </form>
-                    <button className="button" type="submit" value="Submit" onClick={() => {
-                        this.props.addTrail(this.state.trail, this.state.city, this.state.country)}} >Add Hike!</button>
+                        </form>
+                        <button className="button" type="submit" value="Submit" onClick={() => {
+                            this.props.addTrail(this.state.trail, this.state.city, this.state.country)}} >Add Hike!
+                        </button>
                     </div>
                     <div>
               
                         <ul className="info-box">
-                        {this.state.incomplete.map(function(elem){
-                        return (<li key={elem.name}>{elem.name} {elem.city} {elem.state}</li>)
-                        })}
-                    </ul>
+                            {this.state.incomplete.map(function(elem){
+                            return (<li key={elem.name}>{elem.name} {elem.city} {elem.state}</li>)
+                            })}
+                        </ul>
                     </div>
 
                         <p className="App-intro">Trails Blazed</p>
                  </div>
                  <div>
                       <ul className="info-box">
-                              {this.state.incomplete.map(function(elem){
+                              {/* {this.state.incomplete.map(function(elem){
                               return (<li key={elem.name}>{elem.name}</li>)
-                              })}
+                              })} */}
                       </ul>
                  </div>
             </div>
