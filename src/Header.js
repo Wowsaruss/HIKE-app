@@ -10,14 +10,14 @@ class Child extends React.Component {
                     <Navbar inverse collapseOnSelect>
                         <Navbar.Header>
                         <Navbar.Brand>
-                            <a href="#">HIKE APP</a>
+                            <a href="">HIKE APP</a>
                         </Navbar.Brand>
                         <Navbar.Toggle />
                         </Navbar.Header>
                         <Navbar.Collapse>
                         <Nav>
-                            <NavItem eventKey={1} href="#">Track</NavItem>
-                            <NavItem eventKey={2} href="#">To Hike</NavItem>
+                            <NavItem eventKey={1} href="">Track</NavItem>
+                            <NavItem eventKey={2} href="">To Hike</NavItem>
                             <NavDropdown eventKey={3} title="Navigation" id="basic-nav-dropdown">
                             <MenuItem eventKey={3.1}>Track Your Trails</MenuItem>
                             <MenuItem eventKey={3.2}>Trails to Hike</MenuItem>
@@ -27,8 +27,8 @@ class Child extends React.Component {
                             </NavDropdown>
                         </Nav>
                         <Nav pullRight>
-                            <NavItem eventKey={1} href="#">Link Right</NavItem>
-                            <NavItem eventKey={2} href="#">Link Right</NavItem>
+                            <NavItem eventKey={1} href="">Link Right</NavItem>
+                            <NavItem eventKey={2} href="">Link Right</NavItem>
                         </Nav>
                         </Navbar.Collapse>
                     </Navbar>
@@ -41,7 +41,7 @@ class Child extends React.Component {
                     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"></link></div>
 
                 <div className="App-header">
-                    <img className="App-logo animated shake" className="pulse" src="https://lh3.googleusercontent.com/WEcmkSnm_lH7VwRC-r4O1b2bGMeDusyVEBKuDpfFu8lR3TC-Dzd7YP9Uw8YP_zvp4O4=w300" alt="" />
+                    <img className="App-logo animated shake pulse" src="https://lh3.googleusercontent.com/WEcmkSnm_lH7VwRC-r4O1b2bGMeDusyVEBKuDpfFu8lR3TC-Dzd7YP9Uw8YP_zvp4O4=w300" alt="" />
                     <h2 className="header-font animated infinite tada">HIKE!</h2>
                  </div>
 

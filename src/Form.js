@@ -1,5 +1,5 @@
 import React from 'react';
-import axios from "axios";
+// import axios from "axios";
 
 class Child extends React.Component {
     constructor(props){
@@ -34,6 +34,8 @@ class Child extends React.Component {
         })
       }
 
+      
+
 
     render() {
         return(
@@ -45,11 +47,11 @@ class Child extends React.Component {
                         <form action="">
                          <ul className="form-submit">
                          <li>Trail Name:</li>
-                         <li><input type="text" value={this.state.value} onChange={(e) => {this.updateTrail(e.target.value)}} /></li>
+                         <li><input type="text" value={this.state.trail} onChange={(e) => {this.updateTrail(e.target.value)}} /></li>
                          <li>City:</li>
-                         <li><input type="text" value={this.state.value} onChange={(e) => {this.updateCity(e.target.value)}} /></li>
+                         <li><input type="text" value={this.state.city} onChange={(e) => {this.updateCity(e.target.value)}} /></li>
                          <li>State/Country:</li>
-                         <li><input type="text" value={this.state.value} onChange={(e) => {this.updateCountry(e.target.value)}} /></li>
+                         <li><input type="text" value={this.state.country} onChange={(e) => {this.updateCountry(e.target.value)}} /></li>
                          </ul>
                         </form>
                         <button className="button" type="submit" value="Submit" onClick={() => {
@@ -69,9 +71,6 @@ class Child extends React.Component {
                  </div>
                  <div>
                       <ul className="info-box">
-                              {/* {this.state.incomplete.map(function(elem){
-                              return (<li key={elem.name}>{elem.name}</li>)
-                              })} */}
                       </ul>
                  </div>
             </div>

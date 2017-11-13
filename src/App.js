@@ -10,18 +10,14 @@ class App extends Component {
   constructor(){
     super()
     this.state = {
-      incomplete: [], complete: []
+      incomplete: [],
+      complete: []
     }
     this.newTrail = this.newTrail.bind(this)
   }
 
 componentDidMount(){
-  
-  // axios.get("http://localhost:3006/api/create").then((response) => {
-  //   this.setState({
-  //       incomplete: response.data
-  //     })
-  //   })
+
   }
 
   newTrail(name, city, state){
@@ -30,18 +26,13 @@ componentDidMount(){
       city,
       state
     }
-// axios.post("http://localhost:3006/api/create", obj).then((response) => {
-//     console.log(response)
-// })
 
-axios.post("http://localhost:3006/api/create", obj).then((response) => {
-  this.setState({
-    incomplete: response.data
+    axios.post("http://localhost:3006/api/create", obj).then((response) => {
+      this.setState({
+        incomplete: response.data
 
-  })
-})
-
-
+      })
+    })
 
     this.setState({
       incomplete: [...this.state.incomplete, obj]
@@ -49,15 +40,8 @@ axios.post("http://localhost:3006/api/create", obj).then((response) => {
   }
   
  render() {
-    // console.log(this.state.incomplete)
     return (
       <div className="App">
-        {/* POINTS
-            1 Flexbox
-            1 Bootstrap
-            1 Fully Responsize CSS
-            1 Custom Animation
-            1.5 3 Functional Components */}
 
           <div name="hero">
             <Header />
